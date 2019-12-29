@@ -4,30 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class AutoEvent : ScriptableObject
+public class AutoEvent
 {
     [SerializeField]
     public AnimationClip animationClip;
 
     [SerializeField]
-    public AnimationEvent animationEvent;
+    public String functionName;
+
+    [SerializeField]
+    public float time;
 
     public AnimationEvent Event
     {
         get
         {
-            if(null == animationEvent)
-            {
-                animationEvent = OnCreateAnimationEvent();
-            }
-
+            AnimationEvent animationEvent = new AnimationEvent();
+            animationEvent.functionName = functionName;
+            animationEvent.time = time;
             return animationEvent;
         } set {
-            animationEvent = value;
+            functionName = value.functionName;
+            time = value.time;
         }
-    }
-
-    protected virtual AnimationEvent OnCreateAnimationEvent() {
-        return animationEvent;
     }
 }

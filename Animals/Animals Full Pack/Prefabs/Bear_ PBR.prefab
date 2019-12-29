@@ -629,7 +629,7 @@ GameObject:
   - component: {fileID: 1093970673934150118}
   - component: {fileID: 1093970673934150113}
   - component: {fileID: 1093970673934150112}
-  - component: {fileID: 1770993827}
+  - component: {fileID: 8620738654742843037}
   m_Layer: 31
   m_Name: Bear_ PBR
   m_TagString: NPC
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b1cc46fab57f14419470127d1595e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1770993827
+--- !u!114 &8620738654742843037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1627,11 +1627,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoEvents:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - animationClip: {fileID: 7400000, guid: 77021a955daaa4a4d95c1c2c7f17c073, type: 3}
+    functionName: SendEmeraldDamage
+    time: 0.4907162
+  - animationClip: {fileID: 7400000, guid: 6b084c4ecf4ae2849a64c5baffc09c69, type: 3}
+    functionName: SendEmeraldDamage
+    time: 0.6100796
+  - animationClip: {fileID: 7400000, guid: 8ea3326158aaae54b9dcfcfa036aa73f, type: 3}
+    functionName: SendEmeraldDamage
+    time: 0.5490716
+  - animationClip: {fileID: 7400000, guid: c6a2e3b1ed072914d98fdf04c5433ba6, type: 3}
+    functionName: SendEmeraldDamage
+    time: 0.4960212
+  - animationClip: {fileID: 7400000, guid: 155a349a5f5d5cf4884b19fa09516ef1, type: 3}
+    functionName: SendEmeraldDamage
+    time: 0.5570292
 --- !u!1 &1093970673934150529
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,10 +15,13 @@ public class AutoEventTaggerEditor : Editor {
         gameObject = tagger.gameObject;
     }
     public override void OnInspectorGUI() {
-        GUILayout.Label("Auto Events:");
-        foreach(AutoEvent autoEvent in tagger.autoEvents) {
-            if (null != autoEvent && null != autoEvent.animationClip && null != autoEvent.animationEvent) {
-                GUILayout.Label("  " + autoEvent.animationClip.name + " (" + autoEvent.animationEvent.functionName + "@" + autoEvent.animationEvent.time + ")");
+        if (null != tagger.autoEvents) {
+            GUILayout.Label("Auto Events:");
+            foreach (AutoEvent autoEvent in tagger.autoEvents) {
+                AnimationEvent animEvent = autoEvent.Event;
+                if (null != autoEvent && null != autoEvent.animationClip && null != animEvent) {
+                    GUILayout.Label("  " + autoEvent.animationClip.name + " (" + animEvent.functionName + "@" + animEvent.time + ")");
+                }
             }
         }
         if (GUILayout.Button("Scan for events")) {
@@ -34,9 +37,9 @@ public class AutoEventTaggerEditor : Editor {
                 foreach(AnimationClip clip in controller.animationClips) {
                     Debug.Log("  " + clip.name);
                     foreach (AnimationEvent animEvt in clip.events) {
-                        AutoEvent evt = ScriptableObject.CreateInstance<AutoEvent>();
+                        AutoEvent evt = new AutoEvent();
                         evt.animationClip = clip;
-                        evt.animationEvent = animEvt;
+                        evt.Event = animEvt;
                         events.Add(evt);
                         Debug.Log("    Added event " + animEvt.functionName);
                     }

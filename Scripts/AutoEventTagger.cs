@@ -23,6 +23,7 @@ public class AutoEventTagger : MonoBehaviour
             }
             if(!found)
             {
+                Debug.Log("Added missing event to " + evt.animationClip.name);
                 evt.animationClip.AddEvent(evt.Event);
             }
         }
