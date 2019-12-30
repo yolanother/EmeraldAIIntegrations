@@ -1390,8 +1390,8 @@ MonoBehaviour:
   DamageAmount3: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 6
-  TemperamentTabNumber: 0
+  TabNumber: 1
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 1
   AnimationTabNumber: 2
   SoundTabNumber: 1
@@ -1433,10 +1433,10 @@ MonoBehaviour:
   AngleNeededToTurn: 10
   AngleNeededToTurnRunning: 30
   StartingTooCloseDistance: 2
-  TooCloseDistance: 2
+  TooCloseDistance: 1
   RangedTooCloseDistance: 5
   StartingAttackDistance: 4
-  AttackDistance: 4
+  AttackDistance: 2
   RangedAttackDistance: 25
   RunAttackDistance: 3
   CautiousSeconds: 8

@@ -1,0 +1,1 @@
+Undead,Creature,NPC,Animal,Thief,Animals - Predators,Animals - Prey,Ratkin,Orc,
